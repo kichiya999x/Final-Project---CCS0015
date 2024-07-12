@@ -26,35 +26,31 @@ class Course {
     int yearLevel;
 };
 
+// For Enrolment menu:
+//Enroll a Student - this part of your program must let the user select the student (by entering their ID Number or their name). After the student has been selected, the program will then show the list of available courses. The user will then select which courses the student will enrol. Make sure that a course must not be enrolled twice by the same student and a student can only enroll courses for his/her year level.
+//View List of Enrolees - this part of the program will display all the students that are currectly enrolled together with the courses they are enrolled in.
 
 void enrollStudent(){
-    string id, lastName, firstName, middleName, gender, birthday, address, degreeProgram;
-    int yearLevel;
-
+    string studentID, courseID;
     cout << "Enter student ID: ";
-    cin >> id;
-    cout << "Enter last name: ";
-    cin >> lastName;
-    cout << "Enter first name: ";
-    cin >> firstName;
-    cout << "Enter middle name: ";
-    cin >> middleName;
-    cout << "Enter gender: ";
-    cin >> gender;
-    cout << "Enter birthday (MM/DD/YYYY): ";
-    cin >> birthday;
-    cout << "Enter address: ";
-    cin.ignore();
-    getline(cin, address);
-    cout << "Enter degree program: ";
-    getline(cin, degreeProgram);
-    cout << "Enter year level: ";
-    cin >> yearLevel;
+    cin >> studentID;
+
+}
+
+void studentManagement(){
+    
+}
+
+void scheduleManagement(){
+
+}
+
+void courseManagement(){
 
 }
 
 void addStudent(){
-
+    
 }
 
 void viewStudents(){
@@ -73,12 +69,11 @@ void mainMenu(){
     int choice;
     do {
         cout << "LEV School\n";
-        cout << "1. Enroll Student\n";
-        cout << "2. Add Student\n";
-        cout << "3. View Students\n";
-        cout << "4. Add Course\n";
-        cout << "5. View Courses\n";
-        cout << "6. Exit\n";
+        cout << "1. Enrolment\n";
+        cout << "2. Student Management\n";
+        cout << "3. Schedule Management\n";
+        cout << "4. Course Management\n";
+        cout << "5. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -87,18 +82,15 @@ void mainMenu(){
                 enrollStudent();
                 break;
             case 2:
-                addStudent();
+                studentManagement();
                 break;
             case 3:
-                viewStudents();
+                scheduleManagement();
                 break;
             case 4:
-                addCourse();
+                courseManagement();
                 break;
             case 5:
-                viewCourses();
-                break;
-            case 6:
                 cout << "Exiting program...\n";
                 break;
             default:
