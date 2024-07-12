@@ -26,7 +26,30 @@ class Course {
     int yearLevel;
 };
 
+
 void enrollStudent(){
+    string id, lastName, firstName, middleName, gender, birthday, address, degreeProgram;
+    int yearLevel;
+
+    cout << "Enter student ID: ";
+    cin >> id;
+    cout << "Enter last name: ";
+    cin >> lastName;
+    cout << "Enter first name: ";
+    cin >> firstName;
+    cout << "Enter middle name: ";
+    cin >> middleName;
+    cout << "Enter gender: ";
+    cin >> gender;
+    cout << "Enter birthday (MM/DD/YYYY): ";
+    cin >> birthday;
+    cout << "Enter address: ";
+    cin.ignore();
+    getline(cin, address);
+    cout << "Enter degree program: ";
+    getline(cin, degreeProgram);
+    cout << "Enter year level: ";
+    cin >> yearLevel;
 
 }
 
